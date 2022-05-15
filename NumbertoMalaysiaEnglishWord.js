@@ -83,7 +83,7 @@ const moneyToEng = number => {
   dec = R.splice(-3, 3);
   c = tensOnes(dec[1], dec[2]);
   cents = c == 'one ' ? 'and one cent' : c == '' ? '' : `and ${c}cents`;
-  onlys = cents + ' only';
-  return stepper([R.reverse(), cents]).toUpperCase();
+  onlys = stepper([R.reverse(), cents]) + ' only';
+  return onlys.toUpperCase();
 };
 
